@@ -253,7 +253,9 @@ const getStrockNumbers= (inventory)=>{
     };
      let greetings=['hi','en','tg'];
      multilingualSite(greetings);
-    //7
+
+
+    //7 CHECK DEGREE OF  TEMPERATURE
     
     function weatherInCelsius(temperature){
       temperature.forEach(temprate=>{
@@ -272,7 +274,9 @@ const getStrockNumbers= (inventory)=>{
     
     let temperature=[23,45,67,29];
     weatherInCelsius(temperature);
-    
+
+
+    /// CHECKING WHEATHER THE NUMBER IS FACTORIAL
     function isPrime(number){
       if(number == 2){
           return true;
@@ -299,9 +303,53 @@ const getStrockNumbers= (inventory)=>{
     console.log(isPrime(2));
     console.log(isPrime(6));
     
+    // OR
+
+// check if the number is prime
+function checkPrime(n) {
+  if (n <= 1)
+     return false;
+   // Check from 2 to n-1
+   for (let i = 2; i < n; i++)
+     if (n % i == 0)
+       return false;
+   return true;
+ }
+ // isPrime(21) ? console.log("true") : console.log("false"); or
+ 
+ const l=7;
+ console.log(checkPrime(l));
     
     
     
+    ///CALCULATE FACTORIAL
+    // to calculate factorial
+function factorialIterative(n) {
+  if (n < 0) {
+    return "Factorial is not defined for negative numbers";
+  }
+  if (n === 0) {
+    return 1;
+  }
+  let result = 1;
+  for (let i = 1; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
+console.log(factorialIterative(5));
+
+// or
+function factorialRecursive(n) {
+  if (n < 0) {
+    return "Factorial is not defined for negative numbers";
+  }
+  if (n === 0) {
+    return 1;
+  }
+  return n * factorialRecursive(n - 1);
+}
+
     
     
     
